@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import VAMAlgorithm from './VAMAlgorithm';
 
+
 const DistributionTable = () => {
   const [supply, setSupply] = useState([300, 400, 500]);
   const [demand, setDemand] = useState([250, 350, 400, 200]);
