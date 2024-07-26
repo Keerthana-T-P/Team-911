@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import VAMAlgorithm from './VAMAlgorithm';
-import '/911/comm-fridge/src/components/distribStyl.css'
+import '../components/distribStyl.css'
 
 const DistributionTable = () => {
   const [supply, setSupply] = useState([7, 9, 18]);
   const [demand, setDemand] = useState([5, 8, 7, 14]);
   const [costs, setCosts] = useState([
-    [19, 30, 50, 10],
+    [60, 30, 50, 10],
     [70, 30, 40, 60],
     [40, 8, 70, 20]
   ]);
