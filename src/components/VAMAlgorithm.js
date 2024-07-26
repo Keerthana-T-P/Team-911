@@ -131,7 +131,7 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
             <thead>
               <tr>
                 {quantity[0].map((_, colIndex) => (
-                  <th key={colIndex}>{colIndex + 1}</th>
+                  <th key={colIndex}>Fridge {colIndex + 1}</th>
                 ))}
               </tr>
             </thead>
