@@ -1,9 +1,9 @@
-// src/components/VAMAlgorithm.js
 import React, { useEffect, useState } from 'react';
 
-const VAMAlgorithm = ({ supply, demand, costs }) => {
+const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
   const INF = 10 ** 6;
-  const [solution, setSolution] = useState(null);
+  const [solution, setSolution] = useState(null);  
+  const [showQuantity, setShowQuantity] = useState(false);
 
   useEffect(() => {
     let grid = costs.map(row => row.slice());
@@ -12,6 +12,7 @@ const VAMAlgorithm = ({ supply, demand, costs }) => {
     let ans = 0;
     let localSupply = [...supply];
     let localDemand = [...demand];
+    let localQuantity = quantity.map(row => row.slice());
 
     // Helper function for finding the row difference and the column difference
     function findDiff(grid) {
@@ -57,6 +58,7 @@ const VAMAlgorithm = ({ supply, demand, costs }) => {
                 ans += mini2 * mini1;
                 localSupply[ind] -= mini2;
                 localDemand[ind2] -= mini2;
+                localQuantity[ind][ind2] = mini2;
 
                 if (localDemand[ind2] === 0) {
                   for (let r = 0; r < n; r++) {
@@ -85,6 +87,7 @@ const VAMAlgorithm = ({ supply, demand, costs }) => {
                 ans += mini2 * mini1;
                 localSupply[ind2] -= mini2;
                 localDemand[ind] -= mini2;
+                localQuantity[ind2][ind] = mini2;
 
                 if (localDemand[ind] === 0) {
                   for (let r = 0; r < n; r++) {
@@ -102,13 +105,35 @@ const VAMAlgorithm = ({ supply, demand, costs }) => {
       }
     }
 
+    setQuantity(localQuantity);
     setSolution(ans);
-  }, [supply, demand, costs]);
+  }, [supply, demand, costs, quantity, setQuantity]);
+
+  const handleCalculateClick = () => {
+    setShowQuantity(true);
+  };
 
   return (
     <div>
       <h2>Vogel's Approximation Method Result</h2>
+      <button onClick={handleCalculateClick}>Calculate VAM</button>
       {solution !== null && <p>The basic feasible solution is: {solution}</p>}
+      {showQuantity && (
+        <div>
+          <h3>Quantity Matrix</h3>
+          <table>
+            <tbody>
+              {quantity.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  {row.map((cell, cellIndex) => (
+                    <td key={cellIndex}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

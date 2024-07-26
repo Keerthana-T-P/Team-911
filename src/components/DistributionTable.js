@@ -1,14 +1,18 @@
-// src/components/DistributionTable.js
 import React, { useState } from 'react';
 import VAMAlgorithm from './VAMAlgorithm';
 
 const DistributionTable = () => {
-  const [supply, setSupply] = useState([300, 400, 500]);
-  const [demand, setDemand] = useState([250, 350, 400, 200]);
+  const [supply, setSupply] = useState([7, 9, 18]);
+  const [demand, setDemand] = useState([5, 8, 7, 14]);
   const [costs, setCosts] = useState([
-    [3, 1, 7, 4],
-    [2, 6, 5, 9],
-    [8, 3, 3, 2]
+    [19, 30, 50, 10],
+    [70, 30, 40, 60],
+    [40, 8, 70, 20]
+  ]);
+  const [quantity, setQuantity] = useState([
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
   ]);
   const [calculate, setCalculate] = useState(false);
 
@@ -66,7 +70,16 @@ const DistributionTable = () => {
         ))}
       </div>
       <button onClick={() => setCalculate(true)}>Calculate VAM</button>
-      {calculate && <VAMAlgorithm supply={[...supply]} demand={[...demand]} costs={costs.map(row => [...row])} />}
+      {calculate && (
+        // Pass the setQuantity function to VAMAlgorithm
+        <VAMAlgorithm 
+          supply={[...supply]} 
+          demand={[...demand]} 
+          costs={costs.map(row => [...row])} 
+          quantity={quantity} 
+          setQuantity={setQuantity} 
+        />
+      )}
     </div>
   );
 };
