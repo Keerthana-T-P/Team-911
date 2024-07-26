@@ -107,22 +107,22 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
   };
 
   
-//   const tableStyle = {
-//     borderCollapse: 'collapse',
-//     width: '45%',
-//     margin: '0 auto'  
-//   };
+  const tableStyle = {
+    borderCollapse: 'collapse',
+    width: '45%',
+    margin: '0 auto'  
+  };
 
-//   const tableCellStyle = {
-//     border: '1px solid black',
-//     padding: '8px',
-//     textAlign: 'center'
-//   };
+  const tableCellStyle = {
+    border: '1px solid black',
+    padding: '8px',
+    textAlign: 'center'
+  };
 
   return (
     <div>
       <h2>Vogel's Approximation Method Result</h2>
-      <button onClick={handleCalculateClick}>Calculate VAM</button>
+      <button onClick={handleCalculateClick}>Calculate allocation matrix</button>
       {solution !== null && <p>The basic feasible solution is: {solution}</p>}
       {showQuantity && (
         <div style={{ textAlign: 'center' }}>
@@ -131,7 +131,7 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
             <thead>
               <tr>
                 {quantity[0].map((_, colIndex) => (
-                  <th key={colIndex}>Demand {colIndex + 1}</th>
+                  <th key={colIndex}>{colIndex + 1}</th>
                 ))}
               </tr>
             </thead>
