@@ -1,0 +1,231 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-blend-mode: multiply;
+  position: relative;
+  min-height: 1079px;
+  width: 100%;
+  align-items: center;
+  font-weight: 700;
+  padding: 72px 48px;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  width: 813px;
+  max-width: 100%;
+  gap: 20px;
+  font-size: 26px;
+  color: rgba(40, 54, 24, 1);
+  white-space: nowrap;
+  text-align: center;
+  overflow-x: auto; /* Add this line for horizontal scrolling */
+  scrollbar-width: thin; /* Firefox */
+}
+
+.navigation::-webkit-scrollbar {
+  height: 8px; /* Change this value to adjust the scrollbar height */
+}
+
+.navigation::-webkit-scrollbar-thumb {
+  background-color: rgba(40, 54, 24, 1); /* Change the color to match your design */
+  border-radius: 4px; /* Optional: Add rounded corners to the scrollbar thumb */
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto; /* Add this line for horizontal scrolling */
+  }
+}
+
+.navItem {
+  font-family: Poppins, sans-serif;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.heroContent {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1185px;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 1);
+  line-height: 24px;
+  margin: 316px 0 283px;
+}
+
+@media (max-width: 991px) {
+  .heroContent {
+    max-width: 100%;
+    margin: 40px 0;
+  }
+}
+
+.heroTitle {
+  font: 52px Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .heroTitle {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 20px;
+  }
+}
+
+.heroDescription {
+  padding-right: 200px;
+  margin: 12px -1px 9px -5px;
+  font: 20px Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .heroDescription {
+    max-width: 100%;
+  }
+}
+
+.supplierSection {
+  background-color: rgba(33, 24, 24, 0.2);
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-weight: 700;
+  justify-content: center;
+  padding: 80px 60px;
+}
+
+@media (max-width: 991px) {
+  .supplierSection {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.supplierContent {
+  display: flex;
+  width: 100%;
+  max-width: 1332px;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0 16px;
+}
+
+@media (max-width: 991px) {
+  .supplierContent {
+    max-width: 100%;
+  }
+}
+
+.supplierTitle {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  font: 96px Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .supplierTitle {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.supplierSubtitle {
+  color: rgba(192, 192, 192, 1);
+  margin-top: 64px;
+  font: 300 36px Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .supplierSubtitle {
+    margin-top: 40px;
+  }
+}
+
+.communitySection {
+  background-color: rgba(147, 116, 78, 0.59);
+  z-index: 10;
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  padding: 80px 60px 675px;
+  font: 700 48px Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .communitySection {
+    max-width: 100%;
+    font-size: 40px;
+    padding: 0 20px 40px;
+  }
+}
+
+.mapSection {
+  background-color: rgba(176, 200, 156, 0.41);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+}
+
+@media (max-width: 991px) {
+  .mapSection {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.mapImage {
+  aspect-ratio: 0.51;
+  object-fit: auto;
+  object-position: center;
+  width: 301px;
+  background-blend-mode: darken;
+  max-width: 100%;
+  margin: 256px 0 149px;
+}
+
+@media (max-width: 991px) {
+  .mapImage {
+    margin: 40px 0;
+  }
+}
+
+.footer {
+  background-color: rgba(57, 25, 25, 0.87);
+  min-height: 894px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    max-width: 100%;
+  }
+}

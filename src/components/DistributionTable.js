@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import VAMAlgorithm from './VAMAlgorithm';
-import './distribStyl.css'
+import '/911/comm-fridge/src/components/distribStyl.css'
 
 const DistributionTable = () => {
   const [supply, setSupply] = useState([7, 9, 18]);
