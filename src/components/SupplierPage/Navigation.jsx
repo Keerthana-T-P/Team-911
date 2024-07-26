@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import './Navigation.css';
 import DistributionTable  from '../DistributionTable';
+import MapComponent from '../MapComponent';
 import '../distribStyl.css';
 
 const App = () => {
@@ -27,8 +28,7 @@ const App = () => {
       
       <section id="fridge" className="section fridge">
         <h1 className="sectionTitle">Fridge Section</h1>
-        <img src="https://via.placeholder.com/800x400" alt="Fridge" className="sectionImage" />
-        <p className="sectionDescription">Find community fridges near you.</p>
+        <MapComponent />
       </section>
       
       <section id="contact" className="section contact">

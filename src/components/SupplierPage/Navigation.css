@@ -58,7 +58,7 @@ body, html {
     margin: 0 auto;
   }
   #home {
-    background-image: url('./new.jpeg'); /* Replace with actual image path */
+    background-image: url('../hover.jpeg'); /* Replace with actual image path */
     height:100vh;
 }
   

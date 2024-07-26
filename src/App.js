@@ -1,7 +1,5 @@
 // src/App.js
 import React from 'react';
-
-import DistributionTable from './components/DistributionTable';
 import Navigation from './components/SupplierPage/Navigation';
 import './App.css';
 
@@ -12,7 +10,7 @@ function App() {
       <main>
         <Navigation/>
       </main>
-      <MapComponent />
+      
     </div>
   );
 }
