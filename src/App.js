@@ -1,11 +1,9 @@
 // src/App.js
 import React from 'react';
- import GlassContainer from './components/GlassContainer';
-// import DistributionTable from './components/DistributionTable';
-// import GoogleMapComponent from "./components/GoogleMapComponent";
-import Navigation from "./components/SupplierPage/Navigation";
-//import styles from "./components/GlassContainer.module.css";
- import './App.css';
+
+import DistributionTable from './components/DistributionTable';
+import Navigation from './components/SupplierPage/Navigation';
+import './App.css';
 
 function App() {
   return (
@@ -13,9 +11,7 @@ function App() {
       
       <main>
         <Navigation/>
-         <GlassContainer/>
-       {/* <DistributionTable />
-        <GoogleMapComponent/> */}
+        <DistributionTable />
       </main>
       
     </div>
