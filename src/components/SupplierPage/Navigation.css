@@ -63,13 +63,16 @@ body, html {
 }
   
   #supplier {
-    background-image: url('../fridge.jpg');
-    margin-bottom:10px;
+    background-image: url('./BACKKKKKKk.jpg');
+    
   }
   
-  /* #fridge {
-    background-image: url('/path/to/your/fridge-image.jpeg'); 
-  } */
-/*   
+  #fridge {
+    background-image: url('./WhatsApp\ Image\ 2024-07-27\ at\ 4.12.26\ AM.jpeg'); 
+    height: 600px;
+}
+  
   #contact {
-    background-image: url('/path/to/your/contact-image.jpeg');  */
+    background-image: url('./blu.jpeg');  
+    height:400px;
+  }

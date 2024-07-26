@@ -27,14 +27,13 @@ const App = () => {
       </section>
       
       <section id="fridge" className="section fridge">
-        <h1 className="sectionTitle">Fridge Section</h1>
+        <h1 className="sectionTitle">Community Fridges Near You</h1>
         <MapComponent />
       </section>
       
       <section id="contact" className="section contact">
-        <h1 className="sectionTitle">Contact Section</h1>
-        <img src="https://via.placeholder.com/800x400" alt="Contact" className="sectionImage" />
-        <p className="sectionDescription">Contact us for more information.</p>
+        <h1 className="sectionTitle"></h1>
+       
       </section>
     </div>
   );
