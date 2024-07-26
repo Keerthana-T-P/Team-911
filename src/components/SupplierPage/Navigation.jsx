@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import './Navigation.css';
-
+import DistributionTable  from '../DistributionTable';
+import MapComponent from '../MapComponent';
+import '../distribStyl.css';
 
 const App = () => {
   return (
@@ -14,27 +16,24 @@ const App = () => {
       </nav>
       
       <section id="home" className="section home">
-        <img src="comm-fridge/src/components/SupplierPage/Almonds.jpeg" alt="Home" className="sectionImage" />
-        <p className="sectionDescription">Welcome to our landing page!</p>
+        {/* <img src={almondsImage} alt="Home" className="sectionImage" /> */}
+        <p className="sectionDescription">
+        </p>
       </section>
+      
       <section id="supplier" className="section supplier">
         <h1 className="sectionTitle">Supplier Section</h1>
-        <img src="https://via.placeholder.com/800x400" alt="Supplier" className="sectionImage" />
-        <p className="sectionDescription">Become a supplier and join our network.</p>
+        <DistributionTable/>
       </section>
       
-      
-      
       <section id="fridge" className="section fridge">
-        <h1 className="sectionTitle">Fridge Section</h1>
-        <img src="https://via.placeholder.com/800x400" alt="Fridge" className="sectionImage" />
-        <p className="sectionDescription">Find community fridges near you.</p>
+        <h1 className="sectionTitle">Community Fridges Near You</h1>
+        <MapComponent />
       </section>
       
       <section id="contact" className="section contact">
-        <h1 className="sectionTitle">Contact Section</h1>
-        <img src="https://via.placeholder.com/800x400" alt="Contact" className="sectionImage" />
-        <p className="sectionDescription">Contact us for more information.</p>
+        <h1 className="sectionTitle"></h1>
+       
       </section>
     </div>
   );

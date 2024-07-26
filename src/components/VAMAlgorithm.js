@@ -122,8 +122,9 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
   return (
     <div>
       <h2>Vogel's Approximation Method Result</h2>
-      <button onClick={handleCalculateClick}>Calculate allocation matrix</button>
+      
       {solution !== null && <p>The basic feasible solution is: {solution}</p>}
+      <button onClick={handleCalculateClick}>Calculate allocation matrix</button>
       {showQuantity && (
         <div style={{ textAlign: 'center' }}>
           <h3>Quantity Matrix</h3>

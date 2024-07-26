@@ -102,7 +102,8 @@ const MapComponent = () => {
             height: '100vh',
             width: '100vw',
             position: 'relative',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            bottom:125,
         }}>
             <div ref={mapContainerRef} style={{
                 width: '80%',
