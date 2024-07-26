@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
   const INF = 10 ** 6;
-  const [solution, setSolution] = useState(null);  
+  const [solution, setSolution] = useState(null);
   const [showQuantity, setShowQuantity] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,6 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
     let localDemand = [...demand];
     let localQuantity = quantity.map(row => row.slice());
 
-    // Helper function for finding the row difference and the column difference
     function findDiff(grid) {
       let rowDiff = [];
       let colDiff = [];
@@ -36,18 +35,12 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
       return [rowDiff, colDiff];
     }
 
-    // Loop runs until both the demand and the supply are exhausted
     while (Math.max(...localSupply) !== 0 || Math.max(...localDemand) !== 0) {
-      // Finding the row and col difference
       let [row, col] = findDiff(grid);
 
-      // Finding the maximum element in row difference array
       let maxi1 = Math.max(...row);
-
-      // Finding the maximum element in col difference array
       let maxi2 = Math.max(...col);
 
-      // If the row diff max element is greater than or equal to col diff max element
       if (maxi1 >= maxi2) {
         for (let ind = 0; ind < row.length; ind++) {
           if (row[ind] === maxi1) {
@@ -113,20 +106,40 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
     setShowQuantity(true);
   };
 
+  
+//   const tableStyle = {
+//     borderCollapse: 'collapse',
+//     width: '45%',
+//     margin: '0 auto'  
+//   };
+
+//   const tableCellStyle = {
+//     border: '1px solid black',
+//     padding: '8px',
+//     textAlign: 'center'
+//   };
+
   return (
     <div>
       <h2>Vogel's Approximation Method Result</h2>
       <button onClick={handleCalculateClick}>Calculate VAM</button>
       {solution !== null && <p>The basic feasible solution is: {solution}</p>}
       {showQuantity && (
-        <div>
+        <div style={{ textAlign: 'center' }}>
           <h3>Quantity Matrix</h3>
-          <table>
+          <table style={tableStyle}>
+            <thead>
+              <tr>
+                {quantity[0].map((_, colIndex) => (
+                  <th key={colIndex}>Demand {colIndex + 1}</th>
+                ))}
+              </tr>
+            </thead>
             <tbody>
               {quantity.map((row, rowIndex) => (
                 <tr key={rowIndex}>
                   {row.map((cell, cellIndex) => (
-                    <td key={cellIndex}>{cell}</td>
+                    <td key={cellIndex} style={tableCellStyle}>{cell}</td>
                   ))}
                 </tr>
               ))}
