@@ -107,17 +107,17 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
   };
 
   
-//   const tableStyle = {
-//     borderCollapse: 'collapse',
-//     width: '45%',
-//     margin: '0 auto'  
-//   };
+  const tableStyle = {
+    borderCollapse: 'collapse',
+    width: '45%',
+    margin: '0 auto'  
+  };
 
-//   const tableCellStyle = {
-//     border: '1px solid black',
-//     padding: '8px',
-//     textAlign: 'center'
-//   };
+  const tableCellStyle = {
+    border: '1px solid black',
+    padding: '8px',
+    textAlign: 'center'
+  };
 
   return (
     <div>
@@ -131,7 +131,7 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
             <thead>
               <tr>
                 {quantity[0].map((_, colIndex) => (
-                  <th key={colIndex}>Demand {colIndex + 1}</th>
+                  <th key={colIndex}>Fridge {colIndex + 1}</th>
                 ))}
               </tr>
             </thead>
