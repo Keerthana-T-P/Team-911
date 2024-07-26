@@ -1,0 +1,87 @@
+/* src/components/distribStyl.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./fridge.jpg'); /* Add the path to your image here */
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: right; /* Position the background image to the right */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #183400; /* Ensure text is readable on the background */
+}
+  
+h2, h3 {
+    color: #183400; /* Change text color for better contrast */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
+
+.cost-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cost-grid > div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.cost-grid input {
+    margin: 5px;
+    text-align: center;
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cost-grid input:last-child {
+    margin-bottom: 0;
+}
