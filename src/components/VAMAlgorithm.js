@@ -110,14 +110,14 @@ const VAMAlgorithm = ({ supply, demand, costs, quantity, setQuantity }) => {
   const tableStyle = {
     borderCollapse: 'collapse',
     width: '45%',
-    margin: '0 auto'  
+    margin: '0 auto 10px',
   };
 
   const tableCellStyle = {
     border: '1px solid black',
     padding: '8px',
-    textAlign: 'center'
-  };
+    textAlign: 'center',
+  }
 
   return (
     <div>
