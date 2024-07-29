@@ -10,7 +10,8 @@ const App = () => {
     <div className="App">
       <nav className="navbar">
         <Link to="home" smooth={true} duration={500} className="navItem">Home</Link>
-        <Link to="sup" smooth={true} duration={500} className="navItem">Supplier</Link>
+        <Link to="supplier" smooth={true} duration={500} className="navItem">Supplier</Link>
+        <Link to="sup" smooth={true} duration={500} className="navItem">Statistics</Link>
         <Link to="fridge" smooth={true} duration={500} className="navItem">Fridge</Link>
         <Link to="contact" smooth={true} duration={500} className="navItem">Contact</Link>
       </nav>
@@ -20,27 +21,24 @@ const App = () => {
         <p className="sectionDescription">
         </p>
       </section>
-
-      <section id="sup" className="section sup">
+      <section id="supplier" className="section contact">
         <h1 className="sectionTitle"></h1>
         </section>
-
-      <section id="supplier" className="section supplier">
+      
+      <section id="sup" className="section supplier">
         <h1 className="sectionTitle">Supplier Section</h1>
         <DistributionTable/>
       </section>
-
+      
       <section id="fridge" className="section fridge">
-        <h1 className="sectionTitle">Community Fridges Near You</h1>
+        <h1 className="sectionTitle">Community Fridges Near </h1>
         <MapComponent />
       </section>
-      <div>
+      
       <section id="contact" className="section contact">
         <h1 className="sectionTitle"></h1>
        
       </section>
-      </div>
-      
     </div>
   );
 };
